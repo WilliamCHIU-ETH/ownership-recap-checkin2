@@ -120,4 +120,4 @@ Ownership 不是「凡事自己做」，也不是「什麼都怪自己」。是�
 
 ## 延伸筆記
 
-- [從 Technician 到 Entrepreneur｜這支影片打中我的地方](notes/technician-to-entrepreneur/README.md)：把「我很容易退回自己擅長的產出工作」連回市場判斷、真實互動與下一個最小練習。
+- [技術人想賺錢，需要跳出哪些舒適區？｜章節閱讀筆記](notes/technician-to-entrepreneur/README.md)：影片 metadata、下載與轉錄邊界，以及依時間碼整理的內容摘要。
