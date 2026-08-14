@@ -4,31 +4,15 @@
 
 `2026-08-14`｜這是依公開來源與音訊轉錄整理的章節閱讀筆記，不是影片官方逐字稿。
 
----
+```mermaid
+flowchart TD
+    A["00:00｜只做 Technician 的工作<br/>不等於建立 business"]
+    B["04:16｜困難不等於有價值<br/>先讀懂市場語言"]
+    C["06:59｜離開腦內推演<br/>用市場互動避開 Tarpit Ideas"]
+    D["09:18｜產品完成後<br/>還要解決 Go-to-Market"]
 
-## 影片 Metadata
-
-| 欄位 | 內容 |
-|---|---|
-| 標題 | 技术人想赚钱，需要跳出哪些舒适区？ |
-| 頻道 | 课代表立正 |
-| YouTube ID | `38ijD7F_-tY` |
-| 發布日期 | 2025-07-19 |
-| 長度 | 13:06 |
-| 觀看數 | 約 8.8K（擷取於 2026-08-14，會持續變動） |
-| 原始影片 | [YouTube](https://www.youtube.com/watch?v=38ijD7F_-tY) |
-| 同集公開版本 | [Bilibili｜BV1dDgTzoE42](https://www.bilibili.com/video/BV1dDgTzoE42/) |
-| 公開章節／摘要頁 | [Podwise Episode 4802984](https://podwise.ai/episodes/4802984) |
-| YouTube 字幕 | 無官方字幕、無自動字幕 |
-| YouTube 上傳者章節 | 無 |
-
-### 下載與轉錄邊界
-
-- `yt-dlp` 從 `2026.3.3` 更新到 `2026.7.4` 後，仍能正確讀取 YouTube metadata；更新沒有讓影片變得不能下載。
-- YouTube 媒體下載失敗的直接原因是其播放器要求 PO-token，實際回傳 HTTP 403。這是「metadata 可讀、媒體 URL 受限」，不是工具更新造成的退化。
-- 同一集的 Bilibili 公開版本可由更新後的 `yt-dlp` 成功下載音訊，證明新版下載功能本身可用。
-- 音訊經使用者明確同意後，上傳 Groq，以 `whisper-large-v3` 轉錄兩次；第二次使用 2 分鐘切段與中文提示修正第一次的錯誤片段。
-- 章節切點採 Podwise 公開頁；內文是兩次 ASR、公開摘要與上下文交叉整理後的閱讀版。已排除明顯 hallucination，不把它冒充官方字幕。
+    A --> B --> C --> D
+```
 
 ## 00:00–04:16｜技術人為什麼創業反而容易失敗
 
@@ -92,15 +76,18 @@ Go-to-market 可以從漏斗反推：
 - Alex Hormozi 的 YouTube 頻道
 - David Perell 與 Harry Dry 的訪談〈Learn Copywriting in 76 Minutes〉
 
-## 證據邊界
+## Reference
 
-- 這篇只整理影片內容，不推論讀者的個人狀態、領悟或下一步行動。
-- 這篇不證明任何產品需求、採用、留存或商業價值已成立。
-- 不把 ASR 閱讀稿冒充官方字幕，也不把第三方摘要當成影片作者逐字原話。
+- 原始影片：[YouTube｜技术人想赚钱，需要跳出哪些舒适区？](https://www.youtube.com/watch?v=38ijD7F_-tY)｜课代表立正｜2025-07-19｜13:06｜ID `38ijD7F_-tY`
+- 同集公開版本：[Bilibili｜BV1dDgTzoE42](https://www.bilibili.com/video/BV1dDgTzoE42/)
+- 公開章節與摘要：[Podwise｜Episode 4802984](https://podwise.ai/episodes/4802984)
+- 影片引用書籍：Michael E. Gerber, *The E-Myth Revisited*
 
-## 來源
+### 下載、轉錄與證據邊界
 
-- [YouTube｜技术人想赚钱，需要跳出哪些舒适区？](https://www.youtube.com/watch?v=38ijD7F_-tY)
-- [Bilibili｜同集公開版本](https://www.bilibili.com/video/BV1dDgTzoE42/)
-- [Podwise｜章節、摘要與公開 transcript preview](https://podwise.ai/episodes/4802984)
-- Michael E. Gerber, *The E-Myth Revisited*
+- YouTube 無官方字幕、自動字幕或上傳者章節；`yt-dlp 2026.7.4` 可讀取 metadata，但媒體下載因播放器要求 PO-token 而回傳 HTTP 403。這不是更新造成的退化。
+- 同一集的 Bilibili 公開版本可由 `yt-dlp 2026.7.4` 成功下載音訊。
+- 音訊經使用者明確同意後上傳 Groq，以 `whisper-large-v3` 轉錄兩次；第二次使用 2 分鐘切段與中文提示修正錯誤片段。
+- 章節切點採 Podwise 公開頁；內文由兩次 ASR、公開摘要與上下文交叉整理，已排除明顯 hallucination。
+- 這篇只整理影片內容，不推論讀者的個人狀態、領悟或下一步行動，也不證明任何產品需求、採用、留存或商業價值成立。
+- 這篇不是官方字幕，不把 ASR 閱讀稿或第三方摘要當成作者逐字原話。
